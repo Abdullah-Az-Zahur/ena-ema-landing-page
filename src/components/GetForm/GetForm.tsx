@@ -54,7 +54,7 @@ const GetForm = () => {
     <div className="max-w-[800px] mx-auto">
       <form
         onSubmit={handleSubmit}
-        className="bg-[#151E1B] p-6 rounded-lg shadow shadow-foreground flex flex-col gap-4 "
+        className="bg-[#151E1B] p-6 rounded-lg shadow shadow-foreground flex flex-col gap-4"
       >
         <div className="flex flex-col md:flex-row md:gap-4">
           <InputWithIcon

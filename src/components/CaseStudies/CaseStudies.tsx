@@ -74,7 +74,7 @@ const CaseStudies = () => {
         </motion.div>
       </div>
 
-      <div className="w-1/2 md:w-1/4 mx-auto mt-10">
+      <div className="w-fit md:w-1/4 mx-auto mt-10">
         <ButtonPrimary text="I want similar results" />
       </div>
     </div>

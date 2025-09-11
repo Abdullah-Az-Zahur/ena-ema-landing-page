@@ -30,7 +30,7 @@ const SpecialOffer = () => {
             Get 10% OFF + Free Hosting Setup when you book this week.
           </p>
         </div>
-        <div className="w-1/2 md:w-1/4 mx-auto mb-5">
+        <div className="w-fit md:w-1/4 mx-auto mb-5">
           <ButtonPrimary text="Claim my 10% discount" />
         </div>
       </div>

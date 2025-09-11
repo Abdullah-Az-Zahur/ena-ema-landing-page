@@ -1,5 +1,7 @@
 "use client";
 
+import { useRef, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { StaticImageData } from "next/image";
 import user1 from "../../../public/image/user1.png";
 import user2 from "../../../public/image/user2.png";
@@ -16,46 +18,35 @@ interface Review {
 }
 
 const reviews: Review[] = [
-  {
-    image: user1,
-    rating: 5,
-    name: "Sarah Johnson",
-    designation: "SaaS Founder",
-    review:
-      "They delivered a landing page better than agencies charging 10x more. My conversion rate doubled within the first week!",
-  },
-  {
-    image: user2,
-    rating: 4,
-    name: "Mike Chen",
-    designation: "Fitness Coach",
-    review:
-      "Fast, reliable, and professional. My conversions doubled and I'm getting more quality leads than ever before.",
-  },
-  {
-    image: user3,
-    rating: 5,
-    name: "Amanda Rodriguez",
-    designation: "E-Commerce Owner",
-    review:
-      "Best investment for my business. The ROI was immediate and substantial. Will definitely order again.",
-  },
-  {
-    image: user4,
-    rating: 4,
-    name: "David Lee",
-    designation: "SaaS Founder",
-    review:
-      "They delivered a landing page better than agencies charging 10x more. My conversion rate doubled within the first week!",
-  },
+  { image: user1, rating: 5, name: "Sarah Johnson", designation: "SaaS Founder", review: "They delivered a landing page better than agencies charging 10x more. My conversion rate doubled within the first week!" },
+  { image: user2, rating: 4, name: "Mike Chen", designation: "Fitness Coach", review: "Fast, reliable, and professional. My conversions doubled and I'm getting more quality leads than ever before." },
+  { image: user3, rating: 5, name: "Amanda Rodriguez", designation: "E-Commerce Owner", review: "Best investment for my business. The ROI was immediate and substantial. Will definitely order again." },
+  { image: user4, rating: 4, name: "David Lee", designation: "SaaS Founder", review: "They delivered a landing page better than agencies charging 10x more. My conversion rate doubled within the first week!" },
 ];
 
 const AboutUs = () => {
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const [dragLimit, setDragLimit] = useState(0);
+
+  useEffect(() => {
+    const updateLimit = () => {
+      if (sliderRef.current) {
+        const scrollWidth = sliderRef.current.scrollWidth;
+        const clientWidth = sliderRef.current.clientWidth;
+        setDragLimit(scrollWidth - clientWidth);
+      }
+    };
+
+    updateLimit();
+    window.addEventListener("resize", updateLimit);
+    return () => window.removeEventListener("resize", updateLimit);
+  }, []);
+
   return (
     <section className="max-w-6xl mx-auto px-5 md:px-0 py-16">
-      {/* Section Header */}
-      <div className="text-center mb-10">
-        <h2 className="text-white text-2xl md:text-4xl font-semibold">
+
+      <div className="md:text-center mb-10">
+        <h2 className="text-white text-4xl font-semibold">
           What Our Clients Are Saying{" "}
           <span className="text-foreground">About Us</span>
         </h2>
@@ -64,8 +55,8 @@ const AboutUs = () => {
         </p>
       </div>
 
-      {/* Cards */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* Desktop Grid */}
+      <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {reviews.map((item, index) => (
           <ReviewCard
             key={index}
@@ -74,9 +65,36 @@ const AboutUs = () => {
             name={item.name}
             designation={item.designation}
             review={item.review}
-            delay={index * 0.1}
           />
         ))}
+      </div>
+
+      {/* Mobile Slider */}
+      <div className="md:hidden relative">
+        <motion.div
+          ref={sliderRef}
+          className="flex gap-4 cursor-grab px-2"
+          drag="x"
+          dragConstraints={{ right: 0, left: -dragLimit }}
+        >
+          {reviews.map((item, index) => (
+            <motion.div
+              key={index}
+              className="min-w-[70%] flex-shrink-0"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+            >
+              <ReviewCard
+                image={item.image}
+                rating={item.rating}
+                name={item.name}
+                designation={item.designation}
+                review={item.review}
+              />
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

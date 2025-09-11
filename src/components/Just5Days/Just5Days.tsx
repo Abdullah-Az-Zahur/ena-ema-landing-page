@@ -27,16 +27,28 @@ const Just5Days = () => {
   ];
 
   return (
-    <div className="max-w-5xl mx-auto px-5 py-20 grid gap-8 md:grid-cols-3 py-10 md:py-30">
-      {cardData.map((item, index) => (
-        <CardItem
-          key={index}
-          icon={item.icon}
-          days={item.days}
-          title={item.title}
-          description={item.description}
-        />
-      ))}
+    <div className="py-20 md:py-30">
+      <div className="text-center mb-20 p-5">
+        <h2 className="text-white text-4xl">
+          From Idea to Live Landing Page in{" "}
+          <span className="text-foreground">Just 5 Days</span>
+        </h2>
+        <p className="text-gray-400">
+          Our streamlined process ensures fast delivery without compromising
+          quality.
+        </p>
+      </div>
+      <div className="max-w-5xl mx-auto px-5 grid gap-8 md:grid-cols-3 ">
+        {cardData.map((item, index) => (
+          <CardItem
+            key={index}
+            icon={item.icon}
+            days={item.days}
+            title={item.title}
+            description={item.description}
+          />
+        ))}
+      </div>
     </div>
   );
 };

@@ -5,10 +5,25 @@ import Image from "next/image";
 
 const TwoLandingPage = () => {
   return (
-    <div className=" flex justify-center py-10">
-      <div className="md:flex gap-5">
-        <Image src={image23} alt="image" width={800} height={500} />
-        <Image src={image22} alt="image" width={800} height={500} />
+    <div className="py-10 flex justify-center">
+      {/* Scrollable container */}
+      <div className="overflow-x-auto">
+        <div className="whitespace-nowrap inline-block">
+          <Image
+            src={image23}
+            alt="image"
+            width={800}
+            height={500}
+            className="inline-block w-[400px] h-[250px] mr-5 object-cover"
+          />
+          <Image
+            src={image22}
+            alt="image"
+            width={800}
+            height={500}
+            className="inline-block w-[400px] h-[250px] object-cover"
+          />
+        </div>
       </div>
     </div>
   );

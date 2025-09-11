@@ -44,7 +44,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
       </div>
 
       {/* Review with double quotes */}
-      <p className="text-gray-300 text-sm italic">“{review}”</p>
+      <p className="text-gray-300 text-sm italic md:w-fit w-[314px]">“{review}”</p>
 
       {/* User Info */}
       <div className="flex items-center gap-4 mt-4">
