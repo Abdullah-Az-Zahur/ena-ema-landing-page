@@ -7,8 +7,8 @@ const TwoLandingPage = () => {
   return (
     <div className="bg-[#151E1B] flex justify-center py-10">
       <div className="md:flex gap-5">
-        <Image src={image22} alt="image" width={800} height={500} />
         <Image src={image23} alt="image" width={800} height={500} />
+        <Image src={image22} alt="image" width={800} height={500} />
       </div>
     </div>
   );
