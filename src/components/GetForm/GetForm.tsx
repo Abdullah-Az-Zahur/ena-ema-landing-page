@@ -2,10 +2,9 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import ButtonPrimary from "@/components/ui/ButtonPrimary";
-import Lock from "../../../public/image/getForm/Lock.png";
-import Check from "../../../public/image/getForm/Check.png";
-import Star from "../../../public/image/getForm/Star.png";
-
+import Lock from "../../../public/image/icon/Lock.png";
+import Check from "../../../public/image/icon/CheckBlack.png";
+import Star from "../../../public/image/icon/Star.png";
 const GetForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -62,20 +61,20 @@ const GetForm = () => {
             name="name"
             placeholder="Your Name"
             value={formData.name}
-            iconPath="/image/banner/User.png"
+            iconPath="/image/icon/User.png"
           />
           <InputWithIcon
             name="email"
             placeholder="Email"
             value={formData.email}
-            iconPath="/image/banner/EnvelopeSimpleOpen.png"
+            iconPath="/image/icon/EnvelopeSimpleOpen.png"
             type="email"
           />
           <InputWithIcon
             name="phone"
             placeholder="Phone"
             value={formData.phone}
-            iconPath="/image/banner/Phone.png"
+            iconPath="/image/icon/Phone.png"
             type="tel"
           />
         </div>

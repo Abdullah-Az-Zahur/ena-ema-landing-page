@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import arrow from "../../../public/image/ArrowRight.png";
+import arrow from "../../../public/image/icon/ArrowRight.png";
 import Image from "next/image";
 
 interface ButtonPrimaryProps {

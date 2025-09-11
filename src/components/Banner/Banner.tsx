@@ -33,8 +33,7 @@ const Banner = () => {
             conversion-focused landing pages designed, developed, and launched
             in just 5 days.
           </p>
-    <GetForm/>
-
+          <GetForm />
         </div>
       </div>
     </div>

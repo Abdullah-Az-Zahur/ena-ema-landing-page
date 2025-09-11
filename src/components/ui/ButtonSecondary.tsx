@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import arrow from "../../../public/image/ArrowRightWhite.png";
+import arrow from "../../../public/image/icon/ArrowRightWhite.png";
 import Image from "next/image";
 
 interface ButtonSecondaryProps {
