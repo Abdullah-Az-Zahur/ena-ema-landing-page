@@ -13,7 +13,7 @@ const Banner = () => {
         <div className="max-w-6xl py-10 md:py-30 text-center justify-center mx-auto px-5 md:px-0">
           <div className="bg-[#151E1B] rounded-2xl border-t border-foreground flex gap-2 mx-auto justify-center py-1 w-fit px-5 ">
             <Image
-              src="/image/banner/Sparkle.png"
+              src="/image/icon/Sparkle.png"
               alt="Star"
               width={15}
               height={15}
