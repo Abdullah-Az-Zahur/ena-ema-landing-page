@@ -4,7 +4,7 @@ import GetForm from "../GetForm/GetForm";
 const RealCustomers = () => {
   return (
     <div>
-      <div className="my-10 mt-20 px-10 md:px-30 text-center">
+      <div className="my-10 mt-20 px-5 md:px-30 text-center">
         <p className="text-4xl md:text-7xl font-semibold text-white">
           Ready to Turn Visitors Into
           <span className="text-foreground"> Real Customers?</span>
@@ -14,8 +14,8 @@ const RealCustomers = () => {
           conversion-focused landing pages designed, developed, and launched in
           just 5 days.
         </p>
+        <GetForm />
       </div>
-      <GetForm />
     </div>
   );
 };

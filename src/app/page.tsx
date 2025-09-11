@@ -22,7 +22,7 @@ export default function Home() {
           <CaseStudies />
           <Pricing />
         </div>
-        <div className="bg-[#151E1B]">
+        <div className="bg-[radial-gradient(circle_at_left_top,#16372A_0%,#151E1B_60%)]">
           <div className="max-w-[1200px] mx-auto">
             <Just5Days />
             <AboutUs />

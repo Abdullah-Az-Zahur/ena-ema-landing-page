@@ -38,7 +38,7 @@ const FAQ = () => {
       </h2>
       <div className="space-y-4 mt-8">
         {faqs.map((faq, index) => (
-          <div key={index} className="bg-[#182420] rounded-xl p-5 ">
+          <div key={index} className="bg-[#182420] rounded-xl p-5 m-5">
             <div className="space-y-3">
               <Image src={dot} alt="dot" width={12} height={12} />
               <h3 className="text-white font-bold">{faq.question}</h3>

@@ -6,7 +6,7 @@ import GetForm from "../GetForm/GetForm";
 
 const Banner = () => {
   return (
-    <div className="relative bg-[radial-gradient(circle_at_top_center,#2D3333_0%,#151E1B_60%)]">
+    <div className="relative bg-[radial-gradient(circle_at_top_center,#16372A_0%,#151E1B_60%)]">
       <div className="max-w-[1200px] mx-auto ">
         <Header />
 
