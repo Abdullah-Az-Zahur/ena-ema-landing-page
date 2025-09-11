@@ -11,22 +11,22 @@ import ButtonPrimary from "../ui/ButtonPrimary";
 const caseStudiesData = [
   {
     image: image26,
-    title: "Modern UI Redesign",
+    title: "Flowpilot",
     features: ["Improved UX", "Boosted Conversion"],
   },
   {
     image: image27,
-    title: "E-Commerce Platform",
+    title: "Flowpilot",
     features: ["Faster Checkout", "Better SEO"],
   },
   {
     image: image28,
-    title: "SaaS Dashboard",
+    title: "GrowthSummit",
     features: ["Real-Time Analytics", "Dark Mode Support"],
   },
   {
     image: image27,
-    title: "Portfolio Website",
+    title: "GrowthSummit",
     features: ["Interactive Animations", "SEO Optimized"],
   },
 ];

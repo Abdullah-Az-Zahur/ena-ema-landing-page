@@ -7,6 +7,7 @@ import ButtonSecondary from "@/components/ui/ButtonSecondary";
 interface PlanCardProps {
   title: string;
   price: string;
+  description: string;
   features: string[];
   popular?: boolean;
 }
@@ -14,13 +15,14 @@ interface PlanCardProps {
 const PlanCard: React.FC<PlanCardProps> = ({
   title,
   price,
+  description,
   features,
   popular,
 }) => {
   return (
     <motion.div
       whileHover={{ scale: 1.05 }}
-      className={`relative bg-[#182420] p-6 rounded-xl shadow-md flex flex-col gap-4 ${
+      className={`relative bg-[#182420] p-6 md:p-8 rounded-xl shadow-md flex flex-col gap-4 ${
         popular ? "border-2 border-foreground" : ""
       }`}
     >
@@ -31,20 +33,25 @@ const PlanCard: React.FC<PlanCardProps> = ({
         </div>
       )}
 
-      <h3 className="text-xl font-bold text-white">{title}</h3>
-      <p className="text-3xl font-extrabold text-white">{price}</p>
+      <div className="flex justify-between">
+        <div className="">
+          <h3 className="text-xl font-bold text-white">{title}</h3>
+          <p className="text-gray-400 ">{description}</p>
+        </div>
+        <p className="text-3xl font-bold ">{price}</p>
+      </div>
+      <hr className="border-gray-600 my-4" />
       <ul className="flex flex-col gap-2 mt-4">
         {features.map((feature, idx) => (
-          <li key={idx} className="text-gray-300">
-            • {feature}
+          <li key={idx} className="text-gray-400 ">
+            <span className="text-foreground text-xl">•</span>{" "}
+            <span>{feature}</span>
           </li>
         ))}
       </ul>
 
       {popular ? (
-        <div className="mt-auto px-4 py-2 rounded-lg">
-          <ButtonPrimary text="Start my project" />
-        </div>
+        <ButtonPrimary text="Start my project" />
       ) : (
         <ButtonSecondary text="Start my project" />
       )}

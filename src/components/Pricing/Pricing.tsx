@@ -1,29 +1,44 @@
 // components/Pricing.tsx
 import React from "react";
 import PlanCard from "./PlanCard/PlanCard";
+import SpecialOffer from "../SpecialOffer/SpecialOffer";
 
 const Pricing = () => {
   const plans = [
     {
       title: "Basic",
-      price: "$10/mo",
-      features: ["Feature 1", "Feature 2", "Feature 3"],
+      price: "$200",
+      description: "Perfect for solopreneurs",
+      features: [
+        "1 Landing Page (Design + Development)",
+        "Hosting Deployment",
+        "5-Day Delivery",
+        "Basic Support",
+      ],
     },
     {
       title: "Standard",
-      price: "$25/mo",
-      features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4"],
+      price: "$300",
+      description: "Best balance of value & features",
+      features: [
+        "Everything in Basic",
+        "Extra Custom Section",
+        "Free Hosting Setup",
+        "Free Consultation Call",
+        "Priority Support ",
+      ],
       popular: true,
     },
     {
       title: "Premium",
-      price: "$50/mo",
+      price: "$500",
+      description: "For brands & agencies",
       features: [
-        "Feature 1",
-        "Feature 2",
-        "Feature 3",
-        "Feature 4",
-        "Feature 5",
+        "Everything in Standard",
+        "Advanced Animations",
+        "Priority Delivery (3 Days)",
+        "6 Months Free Support",
+        "Performance Optimization",
       ],
     },
   ];
@@ -41,11 +56,15 @@ const Pricing = () => {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid lg:grid-cols-3 gap-8">
         {plans.map((plan) => (
           <PlanCard key={plan.title} {...plan} />
         ))}
       </div>
+
+
+        <SpecialOffer/>
+
     </div>
   );
 };
