@@ -4,8 +4,10 @@ import Footer from "@/components/Footer/Footer";
 export default function Home() {
   return (
     <div className="">
-      <main >
-        <Banner/>
+      <main>
+        <div>
+          <Banner />
+        </div>
       </main>
       <Footer />
     </div>
