@@ -34,7 +34,6 @@ const caseStudiesData = [
 const CaseStudies = () => {
   return (
     <div className="py-10 md:py-20">
-      {/* Section Heading */}
       <div className="text-center mb-10">
         <h2 className="text-white text-2xl md:text-4xl font-bold">
           Case Studies
@@ -42,7 +41,6 @@ const CaseStudies = () => {
         <p className="text-gray-400">See the designs that delivered results</p>
       </div>
 
-      {/* Mobile & Small devices: just stack vertically */}
       <div className="flex flex-col gap-6 px-4 md:hidden">
         {caseStudiesData.map((item, index) => (
           <div key={index}>
@@ -55,7 +53,6 @@ const CaseStudies = () => {
         ))}
       </div>
 
-      {/* md+ devices: draggable slider */}
       <div className="hidden md:block overflow-hidden">
         <motion.div
           className="flex gap-6 px-4"
@@ -77,7 +74,6 @@ const CaseStudies = () => {
         </motion.div>
       </div>
 
-      {/* Button */}
       <div className="w-1/2 md:w-1/4 mx-auto mt-10">
         <ButtonPrimary text="I want similar results" />
       </div>
