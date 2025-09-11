@@ -46,7 +46,7 @@ const Pricing = () => {
   return (
     <div className="max-w-[1200px] mx-auto px-5 md:px-0 py-20">
       <div className="mb-10 ">
-        <h2 className="text-white text-2xl md:text-4xl font-bold">
+        <h2 className="text-white text-2xl md:text-4xl font-semibold">
           Simple, Transparent Pricing —{" "}
           <span className="text-foreground">Choose Your Plan</span>
         </h2>
@@ -56,7 +56,7 @@ const Pricing = () => {
         </p>
       </div>
 
-      <div className="grid lg:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-3 gap-8">
         {plans.map((plan) => (
           <PlanCard key={plan.title} {...plan} />
         ))}

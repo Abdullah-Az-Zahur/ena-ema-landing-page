@@ -27,7 +27,7 @@ const Just5Days = () => {
   ];
 
   return (
-    <div className="max-w-5xl mx-auto px-5 py-20 grid gap-8 md:grid-cols-3">
+    <div className="max-w-5xl mx-auto px-5 py-20 grid gap-8 md:grid-cols-3 py-10 md:py-30">
       {cardData.map((item, index) => (
         <CardItem
           key={index}

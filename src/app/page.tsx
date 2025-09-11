@@ -1,3 +1,4 @@
+import AboutUs from "@/components/AboutUs/AboutUs";
 import Banner from "@/components/Banner/Banner";
 import CaseStudies from "@/components/CaseStudies/CaseStudies";
 import Footer from "@/components/Footer/Footer";
@@ -22,6 +23,7 @@ export default function Home() {
         <div className="bg-[#151E1B]">
           <div className="max-w-[1200px] mx-auto">
             <Just5Days />
+            <AboutUs/>
           </div>
         </div>
       </main>

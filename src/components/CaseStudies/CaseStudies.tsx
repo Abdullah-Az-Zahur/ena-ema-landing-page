@@ -35,7 +35,7 @@ const CaseStudies = () => {
   return (
     <div className="py-10 md:py-20">
       <div className="text-center mb-10">
-        <h2 className="text-white text-2xl md:text-4xl font-bold">
+        <h2 className="text-white text-2xl md:text-4xl font-semibold">
           Case Studies
         </h2>
         <p className="text-gray-400">See the designs that delivered results</p>
