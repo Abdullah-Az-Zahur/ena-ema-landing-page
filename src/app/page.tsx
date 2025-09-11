@@ -1,5 +1,6 @@
 import Banner from "@/components/Banner/Banner";
 import Footer from "@/components/Footer/Footer";
+import TwoLandingPage from "@/components/TwoLandingPage/TwoLandingPage";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <main>
         <div>
           <Banner />
+          <TwoLandingPage/>
         </div>
       </main>
       <Footer />
