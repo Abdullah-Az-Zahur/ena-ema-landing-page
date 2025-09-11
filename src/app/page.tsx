@@ -1,4 +1,5 @@
 import Banner from "@/components/Banner/Banner";
+import CaseStudies from "@/components/CaseStudies/CaseStudies";
 import Footer from "@/components/Footer/Footer";
 import TrustUs from "@/components/TrustUs/TrustUs";
 import TwoLandingPage from "@/components/TwoLandingPage/TwoLandingPage";
@@ -10,6 +11,7 @@ export default function Home() {
         <Banner />
         <TwoLandingPage />
         <TrustUs />
+        <CaseStudies/>
       </main>
       <Footer />
     </div>

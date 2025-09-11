@@ -7,7 +7,7 @@ interface CardProps {
   description: string;
 }
 
-const Card: React.FC<CardProps> = ({ icon, title, description }) => {
+const CardTrust: React.FC<CardProps> = ({ icon, title, description }) => {
   return (
     <div className="bg-[#182420] p-5 rounded-lg hover:shadow-lg hover:shadow-foreground/20 transition-all duration-300">
       <Image
@@ -23,4 +23,4 @@ const Card: React.FC<CardProps> = ({ icon, title, description }) => {
   );
 };
 
-export default Card;
+export default CardTrust;

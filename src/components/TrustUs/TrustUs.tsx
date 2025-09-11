@@ -6,7 +6,7 @@ import Lightning from "../../../public/image/icon/Lightning.png";
 import CurrencyDollar from "../../../public/image/icon/CurrencyDollar.png";
 import ArrowsClockwise from "../../../public/image/icon/ArrowsClockwise.png";
 import Trophy from "../../../public/image/icon/Trophy.png";
-import Card from "./Card/Card";
+import Card from "./CardTrust/CardTrust";
 
 const cardData = [
   {
