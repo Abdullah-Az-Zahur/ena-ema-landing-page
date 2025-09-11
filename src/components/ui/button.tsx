@@ -56,5 +56,4 @@ function Button({
   )
 }
 
-export type { CVAVariantProps as VariantProps }
 export { Button, buttonVariants }
