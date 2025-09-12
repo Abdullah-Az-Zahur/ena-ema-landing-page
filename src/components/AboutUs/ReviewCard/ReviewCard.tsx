@@ -30,7 +30,6 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
       transition={{ duration: 0.4, delay }}
       className="bg-[#182420] p-6 rounded-2xl shadow-lg flex flex-col gap-4"
     >
-      {/* Stars */}
       <div className="flex gap-1">
         {Array.from({ length: 5 }).map((_, i) => (
           <Image
@@ -43,12 +42,12 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
         ))}
       </div>
 
-      {/* Review with double quotes */}
+
       <p className="text-gray-300 text-sm italic max-w-[314px] whitespace-normal break-words">
         “{review}”
       </p>
 
-      {/* User Info */}
+
       <div className="flex items-center gap-4 mt-4">
         <Image
           src={image}
