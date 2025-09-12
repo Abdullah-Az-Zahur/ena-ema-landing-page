@@ -32,7 +32,7 @@ const FAQ = () => {
   ];
   return (
     <div className="max-w-[960px] mx-auto py-10 md:py-20">
-      <h2 className="text-white text-2xl md:text-4xl font-bold text-center">
+      <h2 className="text-white text-4xl font-bold text-center">
         Got Questions<span className="text-foreground">?</span> We’ve Got The
         Answers
       </h2>
