@@ -49,7 +49,7 @@ const cardData = [
 
 const TrustUs = () => {
   return (
-    <div className="">
+    <div className="bg-[#151E1B]">
       <div className="max-w-[1200px] mx-auto px-4 md:px-10 py-10">
         <div className="text-center mb-10">
           <h2 className="text-white text-2xl md:text-4xl">

@@ -27,7 +27,7 @@ const Just5Days = () => {
   ];
 
   return (
-    <div className="py-20 md:py-30">
+    <div className="max-w-[1200px] mx-auto py-20 md:py-30">
       <div className="text-center mb-20 p-5">
         <h2 className="text-white text-4xl">
           From Idea to Live Landing Page in{" "}

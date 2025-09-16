@@ -4,7 +4,7 @@ import GetForm from "../GetForm/GetForm";
 const RealCustomers = () => {
   return (
     <div>
-      <div className="my-10 mt-20 px-5 md:px-30 text-center">
+      <div className="max-w-[1200px] mx-auto my-10 mt-20 px-5 md:px-30 text-center">
         <p className="text-4xl md:text-7xl font-semibold text-white">
           Ready to Turn Visitors Into
           <span className="text-foreground"> Real Customers?</span>

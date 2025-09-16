@@ -14,24 +14,16 @@ export default function Home() {
     <div className="">
       <main>
         <Banner />
-        <div className="bg-[#151E1B]">
-          <TwoLandingPage />
-          <TrustUs />
-        </div>
-        <div className="max-w-[1200px] mx-auto">
-          <CaseStudies />
-          <Pricing />
-        </div>
+        <TwoLandingPage />
+        <TrustUs />
+        <CaseStudies />
+        <Pricing />
         <div className="bg-[radial-gradient(circle_at_left_top,#16372A_0%,#151E1B_60%)]">
-          <div className="max-w-[1200px] mx-auto">
-            <Just5Days />
-            <AboutUs />
-            <FAQ />
-          </div>
+          <Just5Days />
+          <AboutUs />
+          <FAQ />
         </div>
-        <div className="max-w-[1200px] mx-auto">
-          <RealCustomers />
-        </div>
+        <RealCustomers />
       </main>
       <Footer />
     </div>

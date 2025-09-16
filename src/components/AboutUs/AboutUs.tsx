@@ -52,7 +52,7 @@ const reviews: Review[] = [
 
 const AboutUs = () => {
   return (
-    <section className="max-w-6xl mx-auto px-5 md:px-0 py-16">
+    <section className=" mx-auto px-5 md:px-0 py-16">
       <div className="md:text-center mb-10">
         <h2 className="text-white text-4xl font-semibold">
           What Our Clients Are Saying{" "}

@@ -33,7 +33,7 @@ const caseStudiesData = [
 
 const CaseStudies = () => {
   return (
-    <div className="py-10 md:py-20">
+    <div className=" mx-auto py-10 md:py-20">
       <div className="text-center mb-10">
         <h2 className="text-white text-2xl md:text-4xl font-semibold">
           Case Studies
