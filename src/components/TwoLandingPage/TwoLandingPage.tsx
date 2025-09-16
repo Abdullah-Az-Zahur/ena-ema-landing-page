@@ -23,11 +23,10 @@ const TwoLandingPage = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Prepare slides
   const defaultSlides = [SizeDefault, SizeDefault2];
   const mobileSlides = [SizeMobile, SizeMobile2];
 
-  // For large screens, duplicate default slides to make loop work
+  // Duplicate slides for looping on large screens
   const largeSlides = [...defaultSlides, ...defaultSlides];
 
   return (
@@ -36,6 +35,7 @@ const TwoLandingPage = () => {
         modules={[Autoplay]}
         spaceBetween={10}
         loop={true}
+        speed={1000} // slide transition duration in ms
         autoplay={{ delay: 2500, disableOnInteraction: false }}
         breakpoints={{
           0: { slidesPerView: 1 },

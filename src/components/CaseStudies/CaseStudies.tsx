@@ -62,6 +62,7 @@ const CaseStudies = () => {
           spaceBetween={20}
           slidesPerView={2} // show 2 slides side by side
           loop={true}
+          speed={1000} // smooth transition duration in ms
           autoplay={{ delay: 2500, disableOnInteraction: false }}
           modules={[Autoplay]}
         >
