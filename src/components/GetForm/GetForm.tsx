@@ -83,18 +83,38 @@ const GetForm = () => {
           <ButtonPrimary text="Get my high-converting landing page" />
         </div>
       </form>
-      <div className="grid grid-cols-3 justify-between my-4">
-        <div className="items-center justify-center my-auto flex gap-2">
-          <Image src={Lock} alt="Lock" width={16} height={16} className="" />
-          <p className="text-gray-400 ">SSL secure</p>
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-4">
+        <div className="flex items-center gap-2 justify-start sm:justify-center">
+          <Image
+            src={Lock}
+            alt="Lock"
+            className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8"
+          />
+          <p className="text-gray-400 text-sm sm:text-base md:text-lg">
+            SSL secure
+          </p>
         </div>
-        <div className="items-center justify-center my-auto flex gap-2">
-          <Image src={Check} alt="Lock" width={16} height={16} className="" />
-          <p className="text-gray-400 ">Money-back guaranteed</p>
+
+        <div className="flex items-center gap-2 justify-start sm:justify-center">
+          <Image
+            src={Check}
+            alt="Check"
+            className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8"
+          />
+          <p className="text-gray-400 text-sm sm:text-base md:text-lg">
+            Money-back guaranteed
+          </p>
         </div>
-        <div className="items-center justify-center my-auto flex gap-2">
-          <Image src={Star} alt="Lock" width={16} height={16} className="" />
-          <p className="text-gray-400 ">Satisfaction guaranteed</p>
+
+        <div className="flex items-center gap-2 justify-start sm:justify-center">
+          <Image
+            src={Star}
+            alt="Star"
+            className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8"
+          />
+          <p className="text-gray-400 text-sm sm:text-base md:text-lg">
+            Satisfaction guaranteed
+          </p>
         </div>
       </div>
     </div>
