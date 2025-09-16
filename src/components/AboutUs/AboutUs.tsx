@@ -7,6 +7,10 @@ import user3 from "../../../public/image/user3.png";
 import user4 from "../../../public/image/user4.png";
 import ReviewCard from "./ReviewCard/ReviewCard";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+
 interface Review {
   image: StaticImageData;
   rating: number;
@@ -50,9 +54,12 @@ const reviews: Review[] = [
   },
 ];
 
+// Duplicate reviews for smooth auto-scrolling
+const duplicatedReviews = [...reviews, ...reviews];
+
 const AboutUs = () => {
   return (
-    <section className=" mx-auto px-5 md:px-0 py-16">
+    <section className="mx-auto px-5 md:px-0 py-16">
       <div className="md:text-center mb-10">
         <h2 className="text-white text-4xl font-semibold">
           What Our Clients Are Saying{" "}
@@ -63,28 +70,18 @@ const AboutUs = () => {
         </p>
       </div>
 
-      {/* Desktop Grid */}
-      <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {reviews.map((item, index) => (
-          <ReviewCard
-            key={index}
-            image={item.image}
-            rating={item.rating}
-            name={item.name}
-            designation={item.designation}
-            review={item.review}
-          />
-        ))}
-      </div>
-
-      {/* Mobile Scrollable Row */}
-      <div className="md:hidden overflow-x-auto">
-        <div className="flex gap-4 px-2 whitespace-nowrap">
-          {reviews.map((item, index) => (
-            <div
-              key={index}
-              className="inline-block min-w-[75%] flex-shrink-0"
-            >
+      {/* Swiper for medium and above */}
+      <div className="hidden md:block">
+        <Swiper
+          spaceBetween={20}
+          slidesPerView={4} // show 4 slides side by side
+          loop={true}
+          autoplay={{ delay: 0, disableOnInteraction: false }}
+          speed={3000} // control scroll speed
+          modules={[Autoplay]}
+        >
+          {duplicatedReviews.map((item, index) => (
+            <SwiperSlide key={index}>
               <ReviewCard
                 image={item.image}
                 rating={item.rating}
@@ -92,9 +89,32 @@ const AboutUs = () => {
                 designation={item.designation}
                 review={item.review}
               />
-            </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
+      </div>
+
+      {/* Mobile / Small Devices Swiper */}
+      <div className="md:hidden">
+        <Swiper
+          spaceBetween={16}
+          slidesPerView={1.2} // peek effect
+          loop={true}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          modules={[Autoplay]}
+        >
+          {reviews.map((item, index) => (
+            <SwiperSlide key={index}>
+              <ReviewCard
+                image={item.image}
+                rating={item.rating}
+                name={item.name}
+                designation={item.designation}
+                review={item.review}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );
