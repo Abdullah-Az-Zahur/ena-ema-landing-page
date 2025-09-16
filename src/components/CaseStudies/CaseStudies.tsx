@@ -4,9 +4,12 @@ import React from "react";
 import image26 from "../../../public/image/image26.png";
 import image27 from "../../../public/image/image27.png";
 import image28 from "../../../public/image/image28.png";
-import { motion } from "framer-motion";
 import CardCase from "./CardCase/CardCase";
 import ButtonPrimary from "../ui/ButtonPrimary";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
 const caseStudiesData = [
   {
@@ -33,7 +36,7 @@ const caseStudiesData = [
 
 const CaseStudies = () => {
   return (
-    <div className=" mx-auto py-10 md:py-20">
+    <div className="mx-auto py-10 md:py-20">
       <div className="text-center mb-10">
         <h2 className="text-white text-2xl md:text-4xl font-semibold">
           Case Studies
@@ -41,37 +44,37 @@ const CaseStudies = () => {
         <p className="text-gray-400">See the designs that delivered results</p>
       </div>
 
+      {/* Mobile view */}
       <div className="flex flex-col gap-6 px-4 md:hidden">
         {caseStudiesData.map((item, index) => (
-          <div key={index}>
-            <CardCase
-              image={item.image}
-              title={item.title}
-              features={item.features}
-            />
-          </div>
+          <CardCase
+            key={index}
+            image={item.image}
+            title={item.title}
+            features={item.features}
+          />
         ))}
       </div>
 
-      <div className="hidden md:block overflow-hidden">
-        <motion.div
-          className="flex gap-6 px-4"
-          drag="x"
-          dragConstraints={{ left: -400, right: 0 }}
+      {/* Desktop view with Swiper auto slider */}
+      <div className="hidden md:block px-4">
+        <Swiper
+          spaceBetween={20}
+          slidesPerView={2} // show 2 slides side by side
+          loop={true}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          modules={[Autoplay]}
         >
           {caseStudiesData.map((item, index) => (
-            <motion.div
-              key={index}
-              className="shrink-0 md:w-[50%] lg:w-[33%] cursor-grab active:cursor-grabbing"
-            >
+            <SwiperSlide key={index}>
               <CardCase
                 image={item.image}
                 title={item.title}
                 features={item.features}
               />
-            </motion.div>
+            </SwiperSlide>
           ))}
-        </motion.div>
+        </Swiper>
       </div>
 
       <div className="w-fit md:w-1/4 mx-auto mt-10">
